@@ -6,6 +6,8 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import DoughnutChart from "../components/Doughnut";
 import Points from "../components/Points";
+import TopProducts from "../components/TopProducts";
+import Badges from '../components/Badges'
 
 export default function Dashboard() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -20,22 +22,31 @@ export default function Dashboard() {
       <ResponsiveAppBar />
       <Box sx={{ width: "80%", marginLeft: "10%", marginTop: "100px" }}>
         <Grid container spacing={2}>
-          <Grid item xs={8}>
+          <Grid item xs={6}>
+            <Item>
+              <TopProducts />
+            </Item>
+          </Grid>
+          <Grid item xs={6}>
             <Item>
               <Points />
             </Item>
           </Grid>
-          <Grid item xs={4}>
+
+          <Grid item xs={12}>
+            <Item>Lorem ipsum</Item>
+          </Grid>
+          <Grid item xs={6}>
             <Item>
-              <DoughnutChart />
+              <Badges />
             </Item>
           </Grid>
-          <Grid item xs={4}>
-            <Item>xs=4</Item>
-          </Grid>
-          <Grid item xs={8}>
-            <Item>xs=8</Item>
-          </Grid>
+        
+        <Grid item xs={6}>
+          <Item>
+            <DoughnutChart />
+          </Item>
+        </Grid>
         </Grid>
       </Box>
     </>
