@@ -7,7 +7,8 @@ import Container from "@mui/material/Container";
 import DoughnutChart from "../components/Doughnut";
 import Points from "../components/Points";
 import TopProducts from "../components/TopProducts";
-import Badges from '../components/Badges'
+import Badges from "../components/Badges";
+import Purchases from "../components/Purchases";
 
 export default function Dashboard() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -34,23 +35,22 @@ export default function Dashboard() {
           </Grid>
 
           <Grid item xs={12}>
-            <Item>Lorem ipsum</Item>
+            <Item>
+              <Purchases />
+            </Item>
           </Grid>
 
           <Grid item xs={8}>
-
             <Item>
               <Badges />
             </Item>
           </Grid>
-        
 
-        <Grid item xs={4}>
-
-          <Item>
-            <DoughnutChart />
-          </Item>
-        </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <DoughnutChart />
+            </Item>
+          </Grid>
         </Grid>
       </Box>
     </>
