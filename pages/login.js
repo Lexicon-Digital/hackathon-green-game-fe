@@ -36,7 +36,7 @@ export default function Login() {
           </label>
           <label>
             <TextField
-              type="text"
+              type="password"
               name="password"
               className={styles.inputField}
               placeholder="Password"
@@ -44,7 +44,7 @@ export default function Login() {
           </label>
           <label>
             <TextField
-              type="text"
+              type="password"
               name="confirmpassword"
               className={styles.inputField}
               placeholder="Confirm Password"
