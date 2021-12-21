@@ -2,6 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Button from "@mui/material/Button";
+
+import ResponsiveAppBar from "../components/ResponsiveAppBar";
+
+export default function Home() {
+  return (
+    <div className={styles.container}>
+      <ResponsiveAppBar />
+
 import Navbar from "../components/Navbar";
 import Shoppinglist from "../components/Shoppinglist";
 export default function Home() {
@@ -26,6 +34,7 @@ export default function Home() {
 </form>
       <Navbar />
       <Shoppinglist />
+
     </div>
   );
 }
