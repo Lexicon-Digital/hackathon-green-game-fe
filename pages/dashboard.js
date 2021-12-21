@@ -1,0 +1,43 @@
+import ResponsiveAppBar from "../components/ResponsiveAppBar";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import DoughnutChart from "../components/Doughnut";
+import Points from "../components/Points";
+
+export default function Dashboard() {
+  const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }));
+
+  return (
+    <>
+      <ResponsiveAppBar />
+      <Box sx={{ width: "80%", marginLeft: "10%", marginTop: "100px" }}>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <Item>
+              <Points />
+            </Item>
+          </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <DoughnutChart />
+            </Item>
+          </Grid>
+          <Grid item xs={4}>
+            <Item>xs=4</Item>
+          </Grid>
+          <Grid item xs={8}>
+            <Item>xs=8</Item>
+          </Grid>
+        </Grid>
+      </Box>
+    </>
+  );
+}
