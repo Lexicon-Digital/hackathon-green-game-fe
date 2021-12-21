@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Button from "@mui/material/Button";
 import Navbar from "../components/Navbar";
-
+import Shoppinglist from "../components/Shoppinglist";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -25,6 +25,7 @@ export default function Home() {
   <Button variant="contained">Submit</Button>
 </form>
       <Navbar />
+      <Shoppinglist />
     </div>
   );
 }
