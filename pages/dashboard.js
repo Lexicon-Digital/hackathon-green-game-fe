@@ -36,13 +36,13 @@ export default function Dashboard() {
           <Grid item xs={12}>
             <Item>Lorem ipsum</Item>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={8}>
             <Item>
               <Badges />
             </Item>
           </Grid>
         
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Item>
             <DoughnutChart />
           </Item>
