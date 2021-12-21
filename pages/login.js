@@ -36,10 +36,10 @@ export default function Login() {
           </label>
           <label>
             <TextField
-              type="password"
               name="password"
               className={styles.inputField}
               placeholder="Password"
+              type="password"
             />
           </label>
           <label>
