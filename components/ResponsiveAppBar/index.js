@@ -11,8 +11,13 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import Link from "next/link";
 
-const pages = ["Purchases", "Rewards", "Network"];
+const pages = [
+  { label: "Purchases", href: "/shoppinglist" },
+  { label: "Rewards", href: "#" },
+  { label: "Network", href: "#" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 export default function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -76,9 +81,11 @@ export default function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link href={page.href}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.label}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -94,10 +101,11 @@ export default function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                href={page.href}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.label}
               </Button>
             ))}
           </Box>
