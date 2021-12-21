@@ -49,7 +49,7 @@ export default function Login() {
             placeholder="Confirm Password"
           />
         </label>
-        <Button sx={{marginTop: '10px'}} variant="contained">Submit</Button>
+        <Button sx={{marginTop: '10px'}} variant="contained">Sign up</Button>
       </form>
       </Container>
         </div>
